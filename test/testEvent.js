@@ -4,7 +4,7 @@
 main();
 
 function main(){
-     testModel1();
+     testModel2();
 }
 
 
@@ -50,6 +50,7 @@ function testModel2(){
           initialize:function(){
 
                console.log("note build");
+               console.log(this.title);
           },
           author:function(){
 
@@ -67,5 +68,11 @@ function testModel2(){
                return account.owns(this);
           }
      });
+
+     var note = new Note({
+          title:"testNote",
+          author:"zyh"
+     });
+
 
 }
